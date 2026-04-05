@@ -5,91 +5,459 @@
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: black;
 }
 
 main{
+    width: 100%;
+    max-width: 420px;
+    min-height: 92vh;
     background-color: #E8D9D6;
-    height: 100%;
-    width: 70%;
+    border-radius: 28px;
+    overflow: hidden;
+    padding: 22px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.28);
 }
 
+/* =========================
+   BLOQUE SUPERIOR
+========================= */
 .s{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 22px;
 }
 
+/* TEXTO */
 .s .texto{
-    padding: 0px 30px;
-    height: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .s .texto h1{
-    font-size: 60px;
+    font-size: 2.5rem;
+    line-height: 0.95;
+    color: #181818;
+    margin-bottom: 12px;
+    font-weight: 700;
+    width: 70%;
 }
 
 .s .texto p{
-    font-size: 20px;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    color: #4b4b4b;
+    width: 92%;
 }
 
 .s .texto a{
     display: inline-block;
-    margin-top: 10px;     
-    padding: 10px 20px;     
-    color: rgb(255, 255, 255);  
-    background-color: #020202;   
+    margin-top: 18px;     
+    padding: 11px 18px;     
+    color: white;  
+    background-color: #111;   
     text-decoration: none;  
-    border-radius: 15px;
+    border-radius: 999px;
+    text-align: center;
+    width: fit-content;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* IMAGEN */
+.s .izq{
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width: 35%;
+    overflow: hidden;
+    min-height: 340px;
 }
 
-.s .izq{
-    display: flex;
-    justify-content: flex-end;
+.s .izq img{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
-.s img{
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* =========================
+   BLOQUE INFERIOR
+========================= */
 .i{
     display: flex;
-    height: 20%;
-    padding: 20px;
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 22px;
 }
 
+/* CARDS */
 .i .texto{
-    background-color: white;
-    border: 1px solid black;
+    width: 100%;
+    background-color: rgba(255,255,255,0.96);
+    border-radius: 999px;
     display: flex;
-    border-radius: 30%/100%;
+    align-items: center;
     gap: 10px;
+    padding: 10px 12px;
+    min-height: 86px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
 }
 
 .i .texto img{
-    height: 100%;
-    width: 30%;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .i .texto .t{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.i .texto .t h2{
+    font-size: 1rem;
+    color: #111;
+    line-height: 1;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.i .texto .t p{
+    font-size: 0.62rem;
+    line-height: 1.35;
+    color: #555;
+    width: 95%;
+}
+
+/* =========================
+   MÓVIL GRANDE
+========================= */
+@media (min-width: 576px){
+    main{
+        max-width: 520px;
+        border-radius: 32px;
+    }
+
+    .s{
+        gap: 26px;
+    }
+
+    .s .texto h1{
+        font-size: 3rem;
+        width: 65%;
+    }
+
+    .s .texto p{
+        font-size: 0.92rem;
+        width: 88%;
+    }
+
+    .s .texto a{
+        font-size: 0.88rem;
+        padding: 12px 20px;
+    }
+
+    .s .izq{
+        min-height: 400px;
+    }
+
+    .s .izq img{
+        max-width: 360px;
+    }
+
+    .i{
+        gap: 14px;
+        margin-top: 24px;
+    }
+
+    .i .texto{
+        min-height: 94px;
+        padding: 12px 14px;
+    }
+
+    .i .texto img{
+        width: 58px;
+        height: 58px;
+    }
+
+    .i .texto .t h2{
+        font-size: 1.08rem;
+    }
+
+    .i .texto .t p{
+        font-size: 0.68rem;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px){
+    main{
+        max-width: 760px;
+        min-height: auto;
+        padding: 30px 26px 24px;
+        border-radius: 34px;
+    }
+
+    .s{
+        height:360px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+    }
+
+    .s .texto{
+        width: 42%;
+    }
+
+    .s .texto h1{
+        font-size: 3.6rem;
+        width: 90%;
+    }
+
+    .s .texto p{
+        font-size: 0.96rem;
+        width: 95%;
+        line-height: 1.7;
+    }
+
+    .s .texto a{
+        margin-top: 20px;
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+
+    .s .izq{
+        width: 58%;
+        min-height: 430px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .s .izq img{
+        max-width: 390px;
+        border-top-right-radius: 30px;
+    }
+
+    .i{
+        flex-direction: row;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .i .texto{
+        min-height: 110px;
+        padding: 12px;
+        border-radius: 999px;
+    }
+
+    .i .texto img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .i .texto .t h2{
+        font-size: 1.12rem;
+    }
+
+    .i .texto .t p{
+        font-size: 0.62rem;
+        line-height: 1.35;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width: 992px){
+    main{
+        max-width: 980px;
+        padding: 36px 30px 28px;
+        border-radius: 38px;
+    }
+
+    .s{
+        gap: 24px;
+        height: 460px;
+    }
+
+    .s .texto{
+        width: 40%;
+    }
+
+    .s .texto h1{
+        font-size: 4.5rem;
+        width: 85%;
+        line-height: 0.92;
+    }
+
+    .s .texto p{
+        font-size: 1.02rem;
+        width: 92%;
+        line-height: 1.75;
+    }
+
+    .s .texto a{
+        font-size: 0.98rem;
+        padding: 13px 22px;
+    }
+
+    .s .izq{
+        width: 60%;
+        min-height: 500px;
+    }
+
+    .s .izq img{
+        max-width: 470px;
+    }
+
+    .i{
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .i .texto{
+        min-height: 118px;
+        padding: 14px 16px;
+    }
+
+    .i .texto img{
+        width: 68px;
+        height: 68px;
+    }
+
+    .i .texto .t h2{
+        font-size: 1.28rem;
+    }
+
+    .i .texto .t p{
+        font-size: 0.72rem;
+        line-height: 1.4;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px){
+    main{
+        max-width: 1140px;
+        padding: 42px 34px 30px;
+    }
+
+    .s .texto h1{
+        font-size: 5.2rem;
+        width: 80%;
+    }
+
+    .s .texto p{
+        font-size: 1.08rem;
+        width: 88%;
+    }
+
+    .s .texto a{
+        font-size: 1rem;
+        padding: 14px 24px;
+    }
+
+    .s .izq{
+        min-height: 560px;
+    }
+
+    .s .izq img{
+        max-width: 520px;
+    }
+
+    .i .texto{
+        min-height: 126px;
+        padding: 16px 18px;
+    }
+
+    .i .texto img{
+        width: 74px;
+        height: 74px;
+    }
+
+    .i .texto .t h2{
+        font-size: 1.38rem;
+    }
+
+    .i .texto .t p{
+        font-size: 0.78rem;
+    }
+}
+
+/* =========================
+   PANTALLA GRANDE
+========================= */
+@media (min-width: 1400px){
+    main{
+        max-width: 1260px;
+        padding: 48px 38px 34px;
+    }
+
+    .s{
+        height: 530px;
+    }
+
+    .s .texto h1{
+        font-size: 5.8rem;
+        width: 75%;
+    }
+
+    .s .texto p{
+        font-size: 1.15rem;
+        width: 84%;
+        line-height: 1.85;
+    }
+
+    .s .texto a{
+        font-size: 1.05rem;
+        padding: 15px 26px;
+    }
+
+    .s .izq{
+        min-height: 620px;
+    }
+
+    .s .izq img{
+        max-width: 580px;
+    }
+
+    .i .texto{
+        min-height: 134px;
+    }
+
+    .i .texto img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .i .texto .t h2{
+        font-size: 1.48rem;
+    }
+
+    .i .texto .t p{
+        font-size: 0.84rem;
+        line-height: 1.45;
+    }
 }

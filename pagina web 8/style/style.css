@@ -1,53 +1,254 @@
-body {
-    background-color: white;    
+*{
     margin: 0;
-    height: 100vh; /* Altura total de la pantalla */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: black;   
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
 }
 
 .container {
     background-color: rgb(109, 29, 29);
-    width: 1500px;
-    height: 1000px;
+    width: 100%;
+    max-width: 420px;
+    min-height: 35%;
     display: flex;
     flex-direction: row;
-    gap: 200px;
+    justify-content: space-between;
+    padding: 15px 0 0 15px;
+    gap: 2rem;
 }
 
 .imagen{
-    padding: 0 0 0 50px;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .texto{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
 }
 
 h1{
+    width: 100%;
+    max-width: 7.5rem;
     color: white;
-    font-size: 100px;
-    width: 500px;
+    font-size: 1.5rem;
 }
 
 p{
+    width: 100%;
+    max-width: 7.2rem;
+    margin-top: 5px;
+    font-size: 0.5rem;
     color: rgb(209, 209, 209);
-    font-size: 30px;
-    width: 500px;
 }
 
 a{
-    text-decoration: none;
-    font-size: 30px;
-    background-color: rgb(226, 167, 119);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-align: center;
     width: 30%;
+    min-width: 60px;
+    margin-top: 10px;
+    padding: 5px 5px;
+    
+    font-size: 0.4rem;
+    text-align: center;
+    text-decoration: none;
+    
+    color: rgb(0, 0, 0);
+    background-color: rgb(226, 167, 119);
+    border-radius: 5px;
+}
+
+img{
+    height: 14rem;
+    max-height: 16rem;
+    width: auto;
+    max-width: 100%;
+}
+
+/* =========================
+   MÓVIL GRANDE
+========================= */
+@media (min-width: 576px) {
+    .container{
+        max-width: 520px;
+        gap: 2.2rem;
+    }
+
+    h1{
+        max-width: 9rem;
+        font-size: 1.8rem;
+    }
+
+    p{
+        max-width: 8.5rem;
+        font-size: 0.65rem;
+    }
+
+    a{
+        min-width: 70px;
+        font-size: 0.5rem;
+        padding: 6px 8px;
+    }
+
+    img{
+        height: 16rem;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+    .container{
+        max-width: 700px;
+        min-height: 450px;
+        gap: 3rem;
+    }
+
+    .imagen{
+        justify-content: end;
+    }
+    
+    h1{
+        max-width: 12rem;
+        font-size: 2.4rem;
+    }
+
+    p{
+        max-width: 11rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    a{
+        min-width: 90px;
+        font-size: 0.7rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+    }
+
+    img{
+        height: 26rem;
+        max-height: none;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width: 992px) {
+    .container{
+        max-width: 900px;
+        min-height: 550px;
+        gap: 4rem;
+    }
+
+    .imagen{
+        justify-content: end;
+    }
+
+    h1{
+        max-width: 15rem;
+        font-size: 3rem;
+    }
+
+    p{
+        max-width: 16rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    a{
+        min-width: 110px;
+        font-size: 0.85rem;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    img{
+        height: 30rem;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1100px;
+        padding: 50px 0 0 50px;
+        gap: 5rem;
+    }
+
+    .imagen{
+        justify-content: end;
+    }
+
+    h1{
+        max-width: 18rem;
+        font-size: 3.5rem;
+    }
+
+    p{
+        max-width: 16rem;
+        font-size: 1.1rem;
+    }
+
+    a{
+        min-width: 130px;
+        font-size: 0.95rem;
+        padding: 12px 18px;
+    }
+
+    img{
+        height: 33rem;
+    }
+}
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+@media (min-width: 1400px) {
+    .container{
+        max-width: 1250px;
+        min-height: 650px;
+        gap: 6rem;
+    }
+
+    .imagen{
+        justify-content: end;
+    }
+
+    h1{
+        max-width: 20rem;
+        font-size: 4rem;
+    }
+
+    p{
+        max-width: 18rem;
+        font-size: 1.2rem;
+    }
+
+    a{
+        min-width: 150px;
+        font-size: 1rem;
+        padding: 14px 20px;
+    }
+
+    img{
+        height: 35rem;
+        max-height: none;
+    }
 }

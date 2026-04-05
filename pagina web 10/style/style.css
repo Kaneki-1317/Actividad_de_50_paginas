@@ -5,20 +5,19 @@
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    padding: 5px;
 }
 
 main{
-    padding: 20px;
     background-color: #232323;
-    height: 100%;
-    width: 70%;
+    width: 100%;
+    max-width: 420px;
+    min-height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,45 +27,46 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
+    width: 35%;
     height: 80%;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
 }
 
 p{
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 0.5rem;
+    width: 7rem;
 }
 
 .texto a{
     display: inline-block;
     margin-top: 15px;     
-    padding: 10px 20px; 
+    padding: 5% 10px; 
     background-color: #ffffff;    
     color: rgb(0, 0, 0);     
     text-decoration: none;  
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 30%;
+    font-size: 0.3rem;
 }
 
 .imagenes{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 3px;
 }
 
 .imagenes div{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 3px;
 }
 
 img{
-    height: 17%;
-    width: 17%;
+    height: 3.5rem;
 }
 
 .i{
@@ -78,9 +78,219 @@ img{
 }
 
 .iii{
-    olor: #6BDFDA;
+    color: #6BDFDA;
 }
 
 p{
     color: white;
+}
+
+/* =========================
+   MÓVIL GRANDE
+========================= */
+@media (min-width: 576px) {
+    main{
+        max-width: 520px;
+        min-height: 50%;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .texto{
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.65rem;
+        width: 9rem;
+    }
+
+    .texto a{
+        width: fit-content;
+        font-size: 0.45rem;
+        padding: 8px 12px;
+    }
+
+    img{
+        height: 4.2rem;
+    }
+
+    .imagenes{
+        gap: 6px;
+    }
+
+    .imagenes div{
+        gap: 6px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+    main{
+        max-width: 750px;
+        min-height: 55%;
+        justify-content: space-evenly;
+        padding: 30px;
+    }
+
+    .texto{
+        width: 42%;
+        font-size: 1.3rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+        width: 12rem;
+        margin-top: 25px;
+    }
+
+    .texto a{
+        width: fit-content;
+        font-size: 0.65rem;
+        padding: 10px 16px;
+        margin-top: 20px;
+    }
+
+    img{
+        height: 5.5rem;
+    }
+
+    .imagenes{
+        gap: 10px;
+    }
+
+    .imagenes div{
+        gap: 10px;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width: 992px) {
+    main{
+        max-width: 950px;
+        min-height: 60%;
+        justify-content: space-evenly;
+        padding: 40px;
+    }
+
+    .texto{
+        width: 40%;
+        font-size: 1.7rem;
+    }
+
+    p{
+        font-size: 0.95rem;
+        width: 15rem;
+        margin-top: 25px;
+    }
+
+    .texto a{
+        width: fit-content;
+        font-size: 0.8rem;
+        padding: 12px 20px;
+        margin-top: 25px;
+    }
+
+    img{
+        height: 6.5rem;
+    }
+
+    .imagenes{
+        gap: 12px;
+    }
+
+    .imagenes div{
+        gap: 12px;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+    main{
+        max-width: 1100px;
+        min-height: 65%;
+        justify-content: space-evenly;
+        padding: 50px;
+    }
+
+    .texto{
+        width: 38%;
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1rem;
+        width: 17rem;
+        margin-top: 30px;
+    }
+
+    .texto a{
+        width: fit-content;
+        font-size: 0.9rem;
+        padding: 14px 24px;
+        margin-top: 30px;
+        border-radius: 8px;
+    }
+
+    img{
+        height: 7.5rem;
+    }
+
+    .imagenes{
+        gap: 14px;
+    }
+
+    .imagenes div{
+        gap: 14px;
+    }
+}
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+@media (min-width: 1400px) {
+    main{
+        max-width: 1250px;
+        min-height: 70%;
+        justify-content: space-evenly;
+        padding: 60px;
+    }
+
+    .texto{
+        width: 35%;
+        font-size: 2.3rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+        width: 19rem;
+        margin-top: 35px;
+    }
+
+    .texto a{
+        width: fit-content;
+        font-size: 1rem;
+        padding: 15px 26px;
+        margin-top: 35px;
+        border-radius: 8px;
+    }
+
+    img{
+        height: 8.5rem;
+    }
+
+    .imagenes{
+        gap: 16px;
+    }
+
+    .imagenes div{
+        gap: 16px;
+    }
 }

@@ -5,75 +5,371 @@
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 5px;
 }
 
 main{
-    padding: 20px;
     background-color: rgb(214, 226, 226);
-    height: 90%;
-    width: 70%;
+    width: 100%;
+    max-width: 420px;
+    min-height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 img{
-    transform: translate(-10%);
-    height: 110%;
-    width: 110%;
+    height: 14.5rem;
 }
 
-.texto{
-    width: 70%;
+.texto h1{
+    font-size: 1rem;
+    width: 9rem;
+}
+
+.texto p{
+    margin-top: 5px;
+    font-size: 0.5rem;
+    width: 9rem;
 }
 
 .texto a{
     display: inline-block;
-    margin-top: 40px;     
-    padding: 10px 20px; 
+    margin-top: 15px;     
+    padding: 5px 10px; 
     background-color: #FFDE81;    
     color: white;     
     text-decoration: none;  
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-}
-
-.i{
-    margin-top: 60px;
-}
-
-p{
-    margin-top: 20px;
+    font-size: 0.4rem;
 }
 
 h2{
-    font-size: 1rem;
+    font-size: 0.5rem;
     color: white;
 }
 
 h3{
-    font-size: 2rem;
+    font-size: 0.6rem;
     color: white;
 }
 
-.t{
-    margin-top: 0px;
-    width: 70%;
+p{
+    font-size: 0.3rem;
+}
+
+.i p{
+    width: 100%;
     color: white;
 }
 
 .i{
+    margin-top: 20px;
     display: flex;
     border: 1px solid black;
-    padding: 20px 30px;
+    padding: 10px 20px;
     background-color: #49342F;
-    border-radius: 15px;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+/* =========================
+   MÓVIL GRANDE
+========================= */
+@media (min-width: 576px) {
+    main{
+        max-width: 520px;
+        min-height: 55%;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    img{
+        height: 16rem;
+    }
+
+    .texto h1{
+        font-size: 1.3rem;
+        width: 11rem;
+    }
+
+    .texto p{
+        font-size: 0.65rem;
+        width: 11rem;
+        line-height: 1.4;
+    }
+
+    .texto a{
+        font-size: 0.55rem;
+        padding: 7px 12px;
+        border-radius: 15px;
+    }
+
+    h2{
+        font-size: 0.65rem;
+    }
+
+    h3{
+        font-size: 0.75rem;
+    }
+
+    p{
+        font-size: 0.4rem;
+    }
+
+    .i{
+        margin-top: 25px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        gap: 15px;
+    }
+
+    .i p{
+        width: 75%;
+        font-size: 0.45rem;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+    main{
+        max-width: 700px;
+        min-height: 60%;
+        padding: 35px;
+        gap: 30px;
+    }
+
+    img{
+        height: 18rem;
+    }
+
+    .texto h1{
+        font-size: 1.8rem;
+        width: 14rem;
+    }
+
+    .texto p{
+        font-size: 0.85rem;
+        width: 13rem;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+
+    .texto a{
+        font-size: 0.7rem;
+        padding: 9px 16px;
+        border-radius: 18px;
+        margin-top: 20px;
+    }
+
+    h2{
+        font-size: 0.8rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.55rem;
+    }
+
+    .i{
+        margin-top: 30px;
+        padding: 15px 22px;
+        border-radius: 14px;
+        gap: 20px;
+    }
+
+    .i p{
+        width: 80%;
+        font-size: 0.55rem;
+        line-height: 1.4;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width: 992px) {
+    main{
+        max-width: 900px;
+        min-height: 65%;
+        padding: 45px;
+        gap: 40px;
+    }
+
+    img{
+        height: 21rem;
+    }
+
+    .texto h1{
+        font-size: 2.3rem;
+        width: 17rem;
+    }
+
+    .texto p{
+        font-size: 1rem;
+        width: 16rem;
+        line-height: 1.6;
+        margin-top: 12px;
+    }
+
+    .texto a{
+        font-size: 0.85rem;
+        padding: 10px 18px;
+        border-radius: 20px;
+        margin-top: 22px;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 0.7rem;
+    }
+
+    .i{
+        margin-top: 35px;
+        padding: 18px 28px;
+        border-radius: 16px;
+        gap: 25px;
+    }
+
+    .i p{
+        width: 85%;
+        font-size: 0.7rem;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+    main{
+        max-width: 1100px;
+        min-height: 70%;
+        padding: 55px;
+        gap: 50px;
+    }
+
+    img{
+        height: 28rem;
+    }
+
+    .texto h1{
+        font-size: 2.8rem;
+        width: 24rem;
+    }
+
+    .texto p{
+        font-size: 1.1rem;
+        width: 18rem;
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    .texto a{
+        font-size: 0.95rem;
+        padding: 12px 20px;
+        border-radius: 22px;
+        margin-top: 25px;
+    }
+
+    h2{
+        font-size: 1.1rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+
+    .i{
+        margin-top: 40px;
+        padding: 20px 32px;
+        border-radius: 18px;
+        gap: 30px;
+    }
+
+    .i p{
+        width: 90%;
+        font-size: 0.8rem;
+    }
+}
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+@media (min-width: 1400px) {
+    main{
+        max-width: 1250px;
+        min-height: 75%;
+        padding: 60px;
+        gap: 60px;
+    }
+
+    img{
+        height: 30rem;
+    }
+
+    .texto h1{
+        font-size: 3.2rem;
+        width: 27rem;
+    }
+
+    .texto p{
+        font-size: 1.2rem;
+        width: 25rem;
+        line-height: 1.7;
+    }
+
+    .texto a{
+        font-size: 1rem;
+        padding: 14px 22px;
+        border-radius: 24px;
+        margin-top: 25px;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 1.3rem;
+    }
+
+    p{
+        font-size: 0.9rem;
+    }
+
+    .i{
+        margin-top: 35px;
+        padding: 20px 34px;
+        border-radius: 20px;
+        gap: 30px;
+    }
+
+    .i p{
+        width: 95%;
+        font-size: 0.6rem;
+    }
 }

@@ -5,93 +5,465 @@
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    padding: 12px;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 main{
-    height: 100%;
-    width: 70%;
+    width: 100%;
+    max-width: 420px;
+    min-height: 45vh;
     background-color: #D9D9D9;
-    gap: 10px;
+    padding: 20px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .s{
-    height: 65%;
+    width: 100%;
+    z-index: 2;
 }
 
 .s .texto{
-    width: 28%;
-    transform: translate(20%, 20%);
+    width: 50%;
 }
 
 .s .texto h1{
-    font-size: 45px;
+    font-size: 1.55rem;
+    line-height: 1.1;
+    color: #111;
 }
 
 .s .texto p{
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 0.55rem;
+    line-height: 1.5;
+    color: #333;
 }
 
 .s .texto a{
     display: inline-block;
-    margin-top: 20px;     
-    padding: 10px 20px;     
-    color: rgb(255, 255, 255);  
-    background-color: #252525;   
-    text-decoration: none;  
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 14px;
+    padding: 8px 14px;
+    color: white;
+    background-color: #252525;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 0.48rem;
 }
 
 .i{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    width: 50%;
     background-color: white;
-    height: 34.9%;
+    border-radius: 18px;
+    padding: 14px 12px;
+    margin-top: 20px;
+    margin-left: auto;
+    z-index: 3;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
-
 .i .tex{
-    width: 50%;
+    width: 100%;
 }
 
 .i .tex h2{
-    padding: 0px 15px;
-    font-size: 40px;
+    font-size: 1.2rem;
+    color: #111;
+    line-height: 1;
 }
 
 .i .tex h3{
-    padding: 0px 15px;
+    margin-top: 0px;
+    font-size: 0.95rem;
+    color: #111;
 }
 
 .i .tex p{
-    padding: 5px;
-    width: 70%;
+    margin-top: 0px;
+    font-size: 0.42rem;
+    line-height: 1.45;
+    color: #444;
+    width: 100%;
 }
 
 .i .tex img{
+    margin-top: 0px;
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+main > div:last-child{
+    position: relative;
+    width: 100%;
+    flex: 1;
     margin-top: 10px;
-    height: 50%;
-    width: 50%;
 }
 
 .b{
-    width: 40%;
-    height: 60%;
-    transform: translate(10%,-220%);
+    position: absolute;
+    left: -10px;
+    bottom: 80px;
+    width: 50%;
+    max-width: 155px;
+    height: auto;
+    z-index: 1;
+    top: -120px;
 }
 
 .a{
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    width: 50%;
+    max-width: 220px;
+    height: auto;
+    z-index: 2;
+    top: -300px;
+}
 
-    width: 45%;
-    transform: translate(10%,-150%);
+@media (min-width: 576px) {
+    main{
+        max-width: 520px;
+        min-height: 55vh;
+        padding: 24px 20px 20px;
+    }
+
+    .s .texto{
+        width: 55%;
+    }
+
+    .s .texto h1{
+        font-size: 1.9rem;
+    }
+
+    .s .texto p{
+        font-size: 0.65rem;
+    }
+
+    .s .texto a{
+        font-size: 0.55rem;
+        padding: 9px 16px;
+    }
+
+    .i{
+        width: 52%;
+        padding: 16px 14px;
+        margin-top: 24px;
+    }
+
+    .i .tex h2{
+        font-size: 1.4rem;
+    }
+
+    .i .tex h3{
+        font-size: 1rem;
+    }
+
+    .i .tex p{
+        font-size: 0.48rem;
+    }
+
+    .i .tex img{
+        width: 70px;
+    }
+
+    .b{
+        max-width: 230px;
+        top: -150px;
+    }
+
+    .a{
+        max-width: 210px;
+        top: -360px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+    body{
+        padding: 20px;
+    }
+
+    main{
+        max-width: 700px;
+        min-height: auto;
+        padding: 30px 28px 24px;
+        border-radius: 18px;
+    }
+
+    .s .texto{
+        width: 48%;
+    }
+
+    .s .texto h1{
+        font-size: 2.4rem;
+    }
+
+    .s .texto p{
+        font-size: 0.8rem;
+        max-width: 300px;
+    }
+
+    .s .texto a{
+        font-size: 0.65rem;
+        padding: 10px 18px;
+        border-radius: 16px;
+    }
+
+    .i{
+        width: 42%;
+        padding: 18px 16px;
+        margin-top: 10%;
+        border-radius: 20px;  
+    }
+
+    .i .tex h2{
+        font-size: 1.6rem;
+    }
+
+    .i .tex h3{
+        font-size: 1.15rem;
+    }
+
+    .i .tex p{
+        font-size: 0.55rem;
+        line-height: 1.5;
+    }
+
+    .i .tex img{
+        width: 80px;
+    }
+
+    .b{
+        max-width: 310px;
+        top: -190px;
+        left: 0;
+    }
+
+    .a{
+        max-width: 280px;
+        top: -460px;
+        right: 0;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width: 992px) {
+    body{
+        padding: 24px;
+    }
+
+    main{
+        max-width: 900px;
+        min-height: 80vh;
+        padding: 34px 30px 28px;
+        border-radius: 20px;
+    }
+
+    .s .texto{
+        width: 42%;
+    }
+
+    .s .texto h1{
+        font-size: 3rem;
+    }
+
+    .s .texto p{
+        font-size: 0.9rem;
+        max-width: 360px;
+    }
+
+    .s .texto a{
+        font-size: 0.75rem;
+        padding: 11px 20px;
+        border-radius: 18px;
+    }
+
+    .i{
+        width: 34%;
+        padding: 20px 18px;
+        margin-top: 36px;
+        margin-left: 490px;
+        border-radius: 22px;
+    }
+
+    .i .tex h2{
+        font-size: 1.8rem;
+    }
+
+    .i .tex h3{
+        font-size: 1.25rem;
+    }
+
+    .i .tex p{
+        font-size: 0.6rem;
+    }
+
+    .i .tex img{
+        width: 90px;
+    }
+
+    .b{
+        max-width: 300px;
+        top: -180px;
+        left: 10px;
+    }
+
+    .a{
+        max-width: 310px;
+        top: -480px;
+        right: 60px;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+
+    body{
+        padding: 0;
+    }
+
+    main{
+        max-width: 1050px;
+        min-height: auto;
+        padding: 40px 36px 30px;
+        border-radius: 22px;
+    }
+
+    .s{
+        margin-bottom: 50px;
+    }
+
+    .s .texto{
+        width: 40%;
+    }
+
+    .s .texto h1{
+        font-size: 3.4rem;
+    }
+
+    .s .texto p{
+        font-size: 1rem;
+        max-width: 390px;
+    }
+
+    .s .texto a{
+        font-size: 0.82rem;
+        padding: 12px 22px;
+    }
+
+    .i{
+        width: 32%;
+        padding: 22px 20px;
+        margin-left: 580px;
+        margin-top: 40px;
+    }
+
+    .i .tex h2{
+        font-size: 2rem;
+    }
+
+    .i .tex h3{
+        font-size: 1.35rem;
+    }
+
+    .i .tex p{
+        font-size: 0.65rem;
+    }
+
+    .i .tex img{
+        width: 95px;
+    }
+
+    .b{
+        max-width: 440px;
+        top: -230px;
+    }
+
+    .a{
+        max-width: 380px;
+        top: -570px;
+    }
+}
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+@media (min-width: 1400px) {
+    body{
+        padding: 15px;
+    }
+    main{
+        max-width: 1180px;
+        min-height: 88vh;
+        padding: 45px 40px 34px;
+        border-radius: 24px;
+    }
+
+    .s .texto{
+        width: 38%;
+    }
+
+    .s .texto h1{
+        font-size: 3.8rem;
+    }
+
+    .s .texto p{
+        font-size: 1.08rem;
+        max-width: 420px;
+    }
+
+    .s .texto a{
+        font-size: 0.9rem;
+        padding: 13px 24px;
+    }
+
+    .i{
+        width: 30%;
+        padding: 24px 22px;
+        margin-top: 45px;
+        margin-left: 650px;
+    }
+
+    .i .tex h2{
+        font-size: 2.2rem;
+    }
+
+    .i .tex h3{
+        font-size: 1.45rem;
+    }
+
+    .i .tex p{
+        font-size: 0.72rem;
+    }
+
+    .i .tex img{
+        width: 100px;
+    }
+
+    .b{
+        max-width: 450px;
+        top: -250px;
+    }
+
+    .a{
+        max-width: 440px;
+        top: -630px;
+    }
 }

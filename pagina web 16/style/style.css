@@ -5,71 +5,361 @@
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 5px;
 }
 
 main{
     background-image: url("img/16.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% auto;
 
-    height: 100%;
-    width: 70%;
+    width: 100%;
+    max-width: 420px;
+    min-height: 70vh;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 15px;
+    gap: 25px;
+    border-radius: 12px;
 }
 
 .s{
-    width: 50%;
-    padding: 20px;
+    width: 50%; 
+    padding: 10px;
     border: 1px solid black;
-    border-radius: 15px;
+    align-self: flex-start;
+    border-radius: 5px;
     background-color: rgba(105, 105, 112, 0.5);
 }
 
 .s a{
+    margin-top: 5px;
     display: inline-block;
-    margin-top: 30px;     
-    padding: 10px 20px; 
+    padding: 5px 10px; 
     background-color: #63E1E1;    
     color: rgb(0, 0, 0);     
     text-decoration: none;  
-    border-radius: 15px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
+    font-size: 0.3rem;
 }
 
 h1{
     color: rgb(255, 255, 255);
-    font-size: 35px;
-    width: 65%;
+    font-size: 0.9rem;
+    width: 7.5rem;
 }
 
 h2{
     color: rgb(255, 255, 255);
+    font-size: 0.5rem;
 }
 
-p{
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
+.s p { 
+    margin-top: 10px;
+    color: white;
+    width: 9rem;
+    font-size: 0.4rem;
+}
 
+.i p{
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 0.3rem;
 }
 
 .i{
-    margin-top: 10%;
+    
     display: flex;
     border: 1px solid black;
-    padding: 20px 30px;
+    padding: 10px 15px;
     background-color: rgba(105, 105, 112, 0.5);
     border-radius: 15px;
+    width: 100%;
+    max-width: 320px;
+}
+
+/* =========================
+   MÓVIL GRANDE
+========================= */
+@media (min-width: 576px) {
+    main{
+        max-width: 570px;
+        min-height: 40vh;
+        gap: 45px;
+        background-size: 100% auto;
+        padding: 20px;
+    }
+
+    .s{
+        width: 50%;
+        padding: 15px;
+        margin-right: 12rem;
+        border-radius: 8px;
+    }
+
+    .s a{
+        font-size: 0.45rem;
+        padding: 7px 12px;
+        border-radius: 12px;
+    }
+
+    h1{
+        font-size: 1.2rem;
+        width: 10rem;
+    }
+
+    h2{
+        font-size: 0.7rem;
+    }
+
+    .s p{
+        width: 13.5rem;
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+
+    .i{
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 18px;
+        gap: 10px;
+        width: 100%;
+        max-width: 35rem;
+    }
+
+    .i p{
+        width: 7rem;
+        font-size: 0.45rem;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+    main{
+        max-width: 700px;
+        min-height: 60vh;
+        gap: 50px;
+        background-size: 100% auto;
+        padding: 30px;
+    }
+
+    .s{
+        width: 50%;
+        padding: 20px;
+        margin-right: 18rem;
+        border-radius: 10px;
+    }
+
+    .s a{
+        font-size: 0.65rem;
+        padding: 9px 16px;
+        border-radius: 14px;
+        margin-top: 10px;
+    }
+
+    h1{
+        font-size: 1.9rem;
+        width: 17rem;
+    }
+
+    h2{
+        font-size: 0.95rem;
+    }
+
+    .s p{
+        width: 17rem;
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-top: 12px;
+    }
+
+    .i{
+        width: 100%;
+        padding: 15px 22px;
+        border-radius: 20px;
+        gap: 15px;
+    }
+
+    .i p{
+        font-size: 0.65rem;
+        line-height: 1.4;
+    }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (min-width: 992px) {
+    main{
+        max-width: 950px;
+        min-height: 70vh;
+        gap: 60px;
+        background-size: cover;
+        padding: 40px;
+    }
+
+    .s{
+        width: 50%;
+        padding: 25px;
+        margin-right: 24rem;
+        border-radius: 12px;
+    }
+
+    .s a{
+        font-size: 0.8rem;
+        padding: 10px 18px;
+        border-radius: 15px;
+        margin-top: 12px;
+    }
+
+    h1{
+        font-size: 2.6rem;
+        width: 22rem;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    .s p{
+        width: 24rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    .i{
+        width: 100%;
+        max-width: 55rem;
+        padding: 18px 28px;
+        border-radius: 22px;
+        gap: 20px;
+    }
+
+    .i p{
+        width: 12rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1200px) {
+    main{
+        max-width: 1100px;
+        min-height: 75vh;
+        gap: 70px;
+        background-size: 100% auto;
+        padding:40px;
+    }
+
+    .s{
+        width: 50%;
+        padding: 28px;
+        margin-right: 28rem;
+        border-radius: 14px;
+    }
+
+    .s a{
+        font-size: 0.95rem;
+        padding: 12px 20px;
+        border-radius: 16px;
+        margin-top: 15px;
+    }
+
+    h1{
+        font-size: 2.8rem;
+        width: 25rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    .s p{
+        width: 28rem;
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    .i{
+        width: 100%;
+        max-width: 60rem;
+        padding: 20px 32px;
+        border-radius: 24px;
+        gap: 28px;
+    }
+
+    .i p{
+        font-size: 0.9rem;
+    }
+}
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+@media (min-width: 1400px) {
+    main{
+        max-width: 1250px;
+        min-height: 80vh;
+        gap: 80px;
+        background-size: cover;
+        padding: 60px;
+    }
+
+    .s{
+        width: 45%;
+        padding: 30px;
+        margin-right: 34rem;
+        border-radius: 15px;
+    }
+
+    .s a{
+        font-size: 1rem;
+        padding: 14px 22px;
+        border-radius: 18px;
+        margin-top: 18px;
+    }
+
+    h1{
+        font-size: 3.2rem;
+        width: 27rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+
+    .s p{
+        width: 28rem;
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+
+    .i{
+        width: 100%;
+        max-width: 80rem;
+        padding: 22px 36px;
+        border-radius: 25px;
+        gap: 30px;
+    }
+
+    .i p{
+        width: 15rem;
+        font-size: 1rem;
+    }
 }
