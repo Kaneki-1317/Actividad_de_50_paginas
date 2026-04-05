@@ -1,8 +1,8 @@
-# 📚 Taller de Maquetación Web – 25 Páginas
+# 📚 Taller de Maquetación Web
 
 ## 📌 Descripción
 
-Este proyecto consiste en el desarrollo de **25 páginas web** como práctica de maquetación, utilizando tecnologías fundamentales del desarrollo frontend.
+Este proyecto consiste en el desarrollo de **páginas web** como práctica de maquetación, utilizando tecnologías fundamentales del desarrollo frontend.
 
 El objetivo es mejorar habilidades en **HTML, CSS y diseño responsivo**, aplicando buenas prácticas de estructura, estilo y organización.
 
@@ -25,43 +25,6 @@ El objetivo es mejorar habilidades en **HTML, CSS y diseño responsivo**, aplica
 * Flexbox
 * CSS Grid
 * Responsive Design (Media Queries)
-
----
-
-## 📁 Estructura del proyecto
-
-```
-📦 taller-maquetacion
- ┣ 📂 pagina01
- ┣ 📂 pagina02
- ┣ 📂 pagina03
- ┣ 📂 pagina04
- ┣ 📂 pagina05
- ┣ 📂 pagina06
- ┣ 📂 pagina07
- ┣ 📂 pagina08
- ┣ 📂 pagina09
- ┣ 📂 pagina10
- ┣ 📂 pagina11
- ┣ 📂 pagina12
- ┣ 📂 pagina13
- ┣ 📂 pagina14
- ┣ 📂 pagina15
- ┣ 📂 pagina16
- ┣ 📂 pagina17
- ┣ 📂 pagina18
- ┣ 📂 pagina19
- ┣ 📂 pagina20
- ┣ 📂 pagina21
- ┣ 📂 pagina22
- ┣ 📂 pagina23
- ┣ 📂 pagina24
- ┗ 📂 pagina25
-```
-
----
-
-## 📄 Contenido de las páginas
 
 Cada página incluye:
 
